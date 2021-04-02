@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: highscale
-        image: davidmichelman/highscale:v4
+        image: davidmichelman/highscale:v10
         imagePullPolicy: Always
         env:
           - name: MB_LOGGED_PER_MINUTE
