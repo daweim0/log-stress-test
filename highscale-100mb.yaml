@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: highscale-deployment-1000-mb-minute
+  name: highscale-deployment-100-mb-minute
   namespace: default
   labels:
-    app: highscale-deployment-1000-mb-minute
+    app: highscale-deployment-100-mb-minute
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: highscale-deployment-1000-mb-minute
+      app: highscale-deployment-100-mb-minute
   template:
     metadata:
       labels:
-        app: highscale-deployment-1000-mb-minute
+        app: highscale-deployment-100-mb-minute
     spec:
       containers:
       - name: highscale
-        image: davidmichelman/highscale:v10
+        image: davidmichelman/highscale:14
         imagePullPolicy: Always
         env:
           - name: MB_LOGGED_PER_MINUTE
-            value: "1000"
+            value: "100"
           - name: LOG_LINE_LENGTH_BYTES
             value: "1000"
         resources:
